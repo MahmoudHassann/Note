@@ -1,0 +1,11 @@
+.row
+{
+  height: 90vh;
+}
+.image{
+  background-image: url(../../assets/img/404.jpg);
+
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+}

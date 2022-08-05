@@ -1,0 +1,71 @@
+<section>
+  <h1 class="text-center py-5">SignIn</h1>
+  <div *ngIf="errormsg" class="alert alert-danger">{{errormsg}}</div>
+  <form action="" [formGroup]="loginForm" (ngSubmit)="submitLogin(loginForm)">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <label for="Email">Email*</label>
+          <input
+            type="email"
+            formControlName="email"
+            class="form-control mb-2"
+            aria-label="/"
+          />
+          <div
+            *ngIf="
+              loginForm.get('email')?.errors &&
+              loginForm.get('email')?.touched
+            "
+          >
+            <p
+              *ngIf="loginForm.get('email')?.getError('required')"
+              class="alert py-1 alert-danger"
+            >
+              Email Is Required
+            </p>
+            <p
+              *ngIf="loginForm.get('email')?.getError('email')"
+              class="alert py-1 alert-danger"
+            >
+              Formate:- Example@Symbol.com
+            </p>
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="Password">Password*</label>
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control mb-2"
+            aria-label="/"
+          />
+          <div
+            *ngIf="
+              loginForm.get('password')?.errors &&
+              loginForm.get('password')?.touched
+            "
+          >
+            <p
+              *ngIf="loginForm.get('password')?.getError('required')"
+              class="alert py-1 alert-danger"
+            >
+              Password Is Required
+            </p>
+            <p
+              *ngIf="loginForm.get('password')?.getError('pattern')"
+              class="alert py-1 alert-danger"
+            >
+              RegExp is
+              ^(?=.*&lbrack;A-Za-z&rbrack;)(?=.*\d)&lbrack;A-Za-z\d&rbrack;&#10100;8,&#10101;$
+            </p>
+          </div>
+        </div>
+      </div>
+      <button [disabled]="loginForm.invalid" title="/" class="btn mt-3" type="submit">
+        <span *ngIf="isLoading"><i class="fas fa-spinner fa-spin"></i></span>
+        <span *ngIf="!isLoading">LOGIN</span>
+      </button>
+    </div>
+  </form>
+</section>

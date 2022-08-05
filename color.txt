@@ -1,0 +1,4 @@
+dark-color: #1f1d2b
+light-drakColor: #3e3b51	
+yellow-color: #ffc04a
+btn-color: #6f6fc8

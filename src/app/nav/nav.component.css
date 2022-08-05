@@ -1,0 +1,32 @@
+button{
+  box-shadow: none !important;
+  color: #fff;
+}
+
+button span>i{
+  color: #ffc04a;
+}
+.active{
+  border-bottom: 3px solid #ffc04a;
+  border-radius: 50%;
+}
+
+nav{
+  background-color: #1f1d2b !important;
+  color: #fff;
+}
+
+
+
+@media (max-width: 992px)
+{
+  .active{
+    border-radius: 0px !important;
+    border-bottom: 3px solid #ffc04a;
+    padding: 10px 10px 10px 10px;
+    background-color: #3e3b51;
+  }
+  nav .navbar-nav .nav-item .nav-link{
+    transition: all 0.5s;
+  }
+}

@@ -1,0 +1,19 @@
+form
+{
+  margin: auto;
+  background-color: #3e3b51;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+button.btn{
+  border: none;
+  background-color: #6f6fc8;
+  color: #fff !important;
+  transition: all 0.5s;
+}
+button.btn:hover{
+  background-color: #272636;
+  color: #ffc04a !important;
+}
